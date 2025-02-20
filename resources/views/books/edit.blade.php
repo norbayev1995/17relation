@@ -8,6 +8,8 @@
         </h2>
 
         <form method="POST" action="{{ route('books.update', ['book' => $book]) }}">
+            @csrf
+            @method('PUT')
             <div class="mb-3">
                 <label for="title" class="form-label">Kitob Nomi</label>
                 <input type="text" class="form-control" id="title" name="title" placeholder="Kitob nomini kiriting"

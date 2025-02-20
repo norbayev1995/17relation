@@ -28,6 +28,7 @@
                         <a href="{{ route('books.edit', ['book' => $book]) }}" class="btn btn-warning btn-sm">Tahrirlash</a>
                         <form action="{{ route('books.destroy', ['book' => $book]) }}" method="post" style="display: inline-block">
                             @csrf
+                            @method('DELETE')
                             <button type="submit" class="btn btn-danger btn-sm">O'chirish</button>
                         </form>
                     </td>
