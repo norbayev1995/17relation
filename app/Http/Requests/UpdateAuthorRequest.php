@@ -22,8 +22,8 @@ class UpdateAuthorRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required|string|min:3|max:100',
-            'email' => 'required|string|email|max:100|unique:authors',
+            'name' => 'nullable|string|min:3|max:100',
+            'email' => 'nullable|string|email|max:100|unique:authors',
         ];
     }
 }
